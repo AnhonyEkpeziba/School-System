@@ -65,7 +65,7 @@ $page_title = $page_title ?? 'Home';
                 </div>
                 <div class="hidden md:flex space-x-6">
                     <a href="/" class="text-gray-700 hover:text-primary transition">Home</a>
-                    <a href="/pages/about.php" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="/about.php" class="text-gray-700 hover:text-primary transition">About</a>
                     <a href="/academics.php" class="text-gray-700 hover:text-primary transition">Academics</a>
                     <a href="/admissions.php" class="text-gray-700 hover:text-primary transition">Admissions</a>
                     <a href="/gallery.php" class="text-gray-700 hover:text-primary transition">Gallery</a>
