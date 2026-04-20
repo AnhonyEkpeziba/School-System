@@ -1,8 +1,15 @@
-    <footer class="bg-gray-800 text-white mt-12 py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; <?php echo date('Y'); ?> <?php echo $config['site_name']; ?>. All rights reserved.</p>
-            <p class="text-sm mt-2"><?php echo $config['contact_address']; ?> | <?php echo $config['contact_phone']; ?></p>
+    <footer class="bg-gray-800 text-white pt-12 pb-6 no-print">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div><h3 class="text-xl font-bold mb-4"><?php echo $config['site_name']; ?></h3><p class="text-gray-300 text-sm">Forming future priests in knowledge and virtue since 1985.</p><div class="flex space-x-3 mt-4"><?php foreach($config['social'] as $platform => $url): ?><a href="<?php echo $url; ?>" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-<?php echo $platform; ?> text-xl"></i></a><?php endforeach; ?></div></div>
+                <div><h3 class="text-xl font-bold mb-4">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="/about.php" class="text-gray-300 hover:text-white">About Us</a></li><li><a href="/academics.php" class="text-gray-300 hover:text-white">Academics</a></li><li><a href="/admissions.php" class="text-gray-300 hover:text-white">Admissions</a></li><li><a href="/apply.php" class="text-gray-300 hover:text-white">Apply Online</a></li><li><a href="/contact.php" class="text-gray-300 hover:text-white">Contact Us</a></li></ul></div>
+                <div><h3 class="text-xl font-bold mb-4">Contact Info</h3><ul class="space-y-2 text-sm"><li class="flex items-start space-x-2"><i class="fas fa-map-marker-alt mt-1"></i><span class="text-gray-300"><?php echo $config['contact']['address']; ?></span></li><li class="flex items-center space-x-2"><i class="fas fa-phone"></i><span class="text-gray-300"><?php echo $config['contact']['phone']; ?></span></li><li class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span class="text-gray-300"><?php echo $config['contact']['email']; ?></span></li><li class="flex items-center space-x-2"><i class="fas fa-clock"></i><span class="text-gray-300"><?php echo $config['contact']['hours']; ?></span></li></ul></div>
+                <div><h3 class="text-xl font-bold mb-4">Newsletter</h3><p class="text-gray-300 text-sm mb-3">Subscribe for updates about our seminary</p><form id="newsletterForm" class="space-y-2"><input type="email" placeholder="Your email address" class="w-full px-3 py-2 rounded-lg text-gray-800"><button type="submit" class="bg-primary w-full px-4 py-2 rounded-lg hover:bg-primary-dark transition">Subscribe</button></form></div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm"><p>&copy; <?php echo date('Y'); ?> <?php echo $config['site_name']; ?>. All rights reserved. | Designed for Priestly Formation</p></div>
         </div>
     </footer>
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full hidden hover:bg-primary-dark transition shadow-lg no-print"><i class="fas fa-arrow-up"></i></button>
+    <script>window.addEventListener('scroll',function(){document.getElementById('backToTop')?.classList.toggle('hidden',window.pageYOffset<=300);});document.getElementById('backToTop')?.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});document.getElementById('newsletterForm')?.addEventListener('submit',function(e){e.preventDefault();alert('Thank you for subscribing! (Demo mode)');this.reset();});</script>
 </body>
 </html>
