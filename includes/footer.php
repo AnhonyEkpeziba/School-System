@@ -1,4 +1,4 @@
-    <footer class="bg-gray-800 text-white pt-12 pb-6 no-print">
+ <footer class="bg-gray-800 text-white pt-12 pb-6 no-print">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
                 <div><h3 class="text-xl font-bold mb-4"><?php echo $config['site_name']; ?></h3><p class="text-gray-300 text-sm">Forming future priests in knowledge and virtue since 1985.</p><div class="flex space-x-3 mt-4"><?php foreach($config['social'] as $platform => $url): ?><a href="<?php echo $url; ?>" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-<?php echo $platform; ?> text-xl"></i></a><?php endforeach; ?></div></div>
