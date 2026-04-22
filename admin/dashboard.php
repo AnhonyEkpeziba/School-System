@@ -109,17 +109,16 @@ $stats = [
                 <i class="fas fa-user-circle mr-1"></i> <?php echo $_SESSION['admin_name']; ?>
             </div>
         </div>
-
-        <!-- Mobile Top Bar -->
+        
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto">
+            <!-- Mobile Top Bar -->
 <div class="lg:hidden bg-white shadow px-4 py-3 flex items-center justify-between">
     <button onclick="toggleSidebar()" class="text-gray-700 text-xl">
         <i class="fas fa-bars"></i>
     </button>
     <h2 class="font-bold text-gray-800">Admin</h2>
 </div>
-        
-        <!-- Main Content -->
-        <div class="flex-1 overflow-y-auto">
             <!-- Top Header -->
             <div class="bg-white shadow-sm px-6 py-4">
                 <h1 class="text-2xl font-bold text-gray-800">
