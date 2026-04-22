@@ -64,7 +64,9 @@ $stats = [
 <body class="bg-gray-100">
     <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
-        <div class="w-64 bg-primary text-white flex flex-col">
+<div id="sidebar"
+     class="fixed lg:static z-40 w-64 bg-primary text-white flex flex-col h-full
+            transform -translate-x-full lg:translate-x-0 transition-transform duration-200">
             <div class="p-4 border-b border-white border-opacity-20">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-church text-2xl"></i>
@@ -107,6 +109,14 @@ $stats = [
                 <i class="fas fa-user-circle mr-1"></i> <?php echo $_SESSION['admin_name']; ?>
             </div>
         </div>
+
+        <!-- Mobile Top Bar -->
+<div class="lg:hidden bg-white shadow px-4 py-3 flex items-center justify-between">
+    <button onclick="toggleSidebar()" class="text-gray-700 text-xl">
+        <i class="fas fa-bars"></i>
+    </button>
+    <h2 class="font-bold text-gray-800">Admin</h2>
+</div>
         
         <!-- Main Content -->
         <div class="flex-1 overflow-y-auto">
@@ -551,6 +561,11 @@ $stats = [
     </div>
     
     <script>
+        function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('-translate-x-full');
+}
+        
         // Status update
         document.querySelectorAll('.status-select').forEach(select => {
             select.addEventListener('change', function() {
