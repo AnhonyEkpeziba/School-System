@@ -294,7 +294,7 @@ $stats = [
                                     </select>
                                     <input type="search" id="searchApp" placeholder="Search by name..." class="border rounded-lg px-3 py-2 text-sm w-64">
                                     <button onclick="exportData()" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary-dark">
-                                        <i class="fas fa-download mr-1"></i> Export
+                                        <i class="fas fa-download mr-1">Export</i> 
                                     </button>
                                 </div>
                             </div>
