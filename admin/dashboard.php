@@ -62,7 +62,7 @@ $stats = [
     </style>
 </head>
 <body class="bg-gray-100">
-    <div class="flex h-screen">
+    <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
         <div class="w-64 bg-primary text-white flex flex-col">
             <div class="p-4 border-b border-white border-opacity-20">
