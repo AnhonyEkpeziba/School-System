@@ -111,7 +111,7 @@ $stats = [
         </div>
         
         <!-- Main Content -->
-        <div class="flex-1 overflow-y-auto">
+        <div class="flex-1 overflow-y-auto w-full">
             <!-- Mobile Top Bar -->
 <div class="lg:hidden bg-white shadow px-4 py-3 flex items-center justify-between">
     <button onclick="toggleSidebar()" class="text-gray-700 text-xl">
@@ -120,7 +120,7 @@ $stats = [
     <h2 class="font-bold text-gray-800">Admin</h2>
 </div>
             <!-- Top Header -->
-            <div class="bg-white shadow-sm px-6 py-4">
+            <div class="bg-white shadow-sm px-4 sm:px-6 py-4">
                 <h1 class="text-2xl font-bold text-gray-800">
                     <?php 
                         switch($page) {
@@ -139,7 +139,7 @@ $stats = [
             <div class="p-6">
                 <?php if($page == 'dashboard'): ?>
                     <!-- Stats Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
                         <div class="bg-white rounded-lg shadow p-6 border-l-4 border-primary">
                             <div class="flex justify-between items-start">
                                 <div>
@@ -183,7 +183,7 @@ $stats = [
                     </div>
                     
                     <!-- Charts -->
-                    <div class="grid lg:grid-cols-2 gap-6 mb-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
                         <div class="bg-white rounded-lg shadow p-6">
                             <h3 class="font-bold text-gray-800 mb-4">Applications by Program</h3>
                             <canvas id="programsChart" height="200"></canvas>
