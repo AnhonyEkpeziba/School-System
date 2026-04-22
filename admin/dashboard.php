@@ -292,7 +292,7 @@ $stats = [
                                         <option value="accepted">Accepted</option>
                                         <option value="rejected">Rejected</option>
                                     </select>
-                                    <input type="search" id="searchApp" placeholder="Search by name..." class="border rounded-lg px-3 py-2 sm:px-2 text-sm w-64">
+                                    <input type="search" id="searchApp" placeholder="Search by name..." class="border rounded-lg px-3 py-2 sm:w-40 text-sm w-64">
                                     <button onclick="exportData()" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary-dark">
                                         <i class="fas fa-download mr-1">Export</i> 
                                     </button>
